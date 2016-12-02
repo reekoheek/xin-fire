@@ -1,5 +1,5 @@
 import xin from 'xin';
-import checkCordovaAsync from '../../lib/check-cordova';
+import isCordova from 'xin-cordova/lib/is-cordova';
 
 class FireMessaging extends xin.Component {
   get props () {
@@ -16,7 +16,7 @@ class FireMessaging extends xin.Component {
     super.attached();
 
     return new Promise(async (resolve, reject) => {
-      if (await checkCordovaAsync() === false) {
+      if (await isCordova() === false) {
         console.warn('fire-messaging only works on cordova for now\nThe token will be mocked');
         this.set('token', Math.random().toString(36).replace(/[^a-z]+/g, '') + '');
         return resolve();
