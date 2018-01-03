@@ -1,7 +1,7 @@
-import xin from 'xin';
+import { Component, define} from '@xinix/xin';
 import isCordova from 'xin-cordova/lib/is-cordova';
 
-class FireMessaging extends xin.Component {
+class FireMessaging extends Component {
   get props () {
     return Object.assign({}, super.props, {
       token: {
@@ -33,6 +33,6 @@ class FireMessaging extends xin.Component {
   }
 }
 
-xin.define('fire-messaging', FireMessaging);
+define('fire-messaging', FireMessaging);
 
 export default FireMessaging;
