@@ -1,4 +1,4 @@
-import { Component, define} from '@xinix/xin';
+import { Component, define } from '@xinix/xin';
 import isCordova from 'xin-cordova/lib/is-cordova';
 
 class FireMessaging extends Component {
